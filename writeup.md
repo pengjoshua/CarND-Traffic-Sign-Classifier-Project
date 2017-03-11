@@ -74,11 +74,11 @@ Essentially, scaling the inputs through normalization gives the error surface a 
 
 ####2. Describe how, and identify where in your code, you set up training, validation and testing data. 
 
-I decided to augment the training set with randomly rotated (+/- 20 deg) and randomly translated copies (+/- 5 px). I added the rotated and translated images to the training set to make the upcoming model trained on this data more robust to similar potential variations in the testing set.
+I decided to augment the training set with randomly rotated (+/- 15 deg) and randomly translated copies (+/- 2 px). I added the rotated and translated images to the training set to make the upcoming model trained on this data more robust to similar potential variations in the testing set.
 
 The difference between the original data set and the augmented data set is:
-* addition of randomly rotated images (+/- 20 deg)
-* addition of randomly translated images (+/- 5 px)
+* addition of randomly rotated images (+/- 15 deg)
+* addition of randomly translated images (+/- 2 px)
 * min-max normalization (-0.5, 0.5)
 
 ####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
@@ -139,7 +139,7 @@ I repeat this pattern for 3 more fully connected layers and output a fully conne
 Using 100 training epochs, keep-prob of 0.5, learning rate of 0.001, batch size of 128...
 
 My final model results were:
-* training set accuracy of 96.5%
+* training set accuracy of 97.9%
 * validation set accuracy of 96.5% 
 * test set accuracy of 94.8%
 * new images accuracy of 100.0%
